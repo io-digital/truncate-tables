@@ -15,11 +15,9 @@ composer require io-digital/truncate-tables
 
 ## Usage
 
-Inside of the `run()` function in `database/seeders/DatabaseSeeder.php`, the following can be added to the run function:
+Inside of the `run()` function in `database/seeders/DatabaseSeeder.php`, it can be used like this:
 
 ```php
-use IoDigital\TruncateTable\TruncateTable;
-
 TruncateTable::fromArrays([
 'users',
 'posts'
