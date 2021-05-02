@@ -15,24 +15,41 @@ composer require io-digital/truncate-tables
 
 ## Usage
 
-Inside of the `run()` function in `database/seeders/DatabaseSeeder.php`, it can be used like this:
+In `database/seeders/DatabaseSeeder.php`:
 
 ```php
-TruncateTable::fromArrays([
-'users',
-'posts'
-])->clean();
+<?php
 
-// or to add seeders as well
+namespace Database\Seeders;
 
-TruncateTable::fromArrays([
-'users',
-'posts',
-], [
-UserTableSeeder::class,
-PostTableSeeder::class,
-])->cleanAndSeed();
+use Illuminate\Database\Seeder;
+use IoDigital\TruncateTable\TruncateTable;
 
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        TruncateTable::fromArrays([
+            'users',
+            'posts'
+        ])->clean();
+        
+        // Or like the following
+        
+        TruncateTable::fromArrays([
+            'users',
+            'posts'
+        ], [
+            UserTableSeeder::class,
+            PostTableSeeder::class,
+        ])->cleanAndSeed();
+    }
+}
 ```
 
 ## Testing
