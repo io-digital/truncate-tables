@@ -15,7 +15,7 @@ composer require io-digital/truncate-tables
 
 ## Usage
 
-In the run function of `database/seeders/DatabaseSeeder.php`, the following can be added to the run function:
+Inside of the `run()` function in `database/seeders/DatabaseSeeder.php`, the following can be added to the run function:
 
 ```php
 use IoDigital\TruncateTable\TruncateTable;

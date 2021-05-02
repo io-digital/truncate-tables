@@ -54,7 +54,7 @@ class TruncateTable extends Seeder
 
     private function seed()
     {
-        if (count($this->toSeed > 0)) {
+        if ($this->toSeed !== []) {
             foreach ($this->toSeed as $seeder) {
                 $this->call($seeder);
             }
