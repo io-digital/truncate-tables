@@ -3,8 +3,8 @@
 namespace IoDigital\TruncateTable;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class TruncateTable extends Seeder
 {
@@ -66,9 +66,11 @@ class TruncateTable extends Seeder
         switch (DB::getDriverName()) {
             case 'mysql':
                 DB::statement('SET FOREIGN_KEY_CHECKS=0');
+
                 break;
             case 'sqlite':
                 DB::statement('PRAGMA foreign_keys = OFF');
+
                 break;
         }
     }
@@ -78,9 +80,11 @@ class TruncateTable extends Seeder
         switch (DB::getDriverName()) {
             case 'mysql':
                 DB::statement('SET FOREIGN_KEY_CHECKS=1');
+
                 break;
             case 'sqlite':
                 DB::statement('PRAGMA foreign_keys = ON');
+
                 break;
         }
     }

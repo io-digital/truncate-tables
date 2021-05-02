@@ -4,7 +4,6 @@ namespace IoDigital\TruncateTable;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use IoDigital\TruncateTable\Commands\TruncateTableCommand;
 
 class TruncateTableServiceProvider extends PackageServiceProvider
 {

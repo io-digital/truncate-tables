@@ -3,8 +3,8 @@
 namespace IoDigital\TruncateTable\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use IoDigital\TruncateTable\TruncateTableServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
