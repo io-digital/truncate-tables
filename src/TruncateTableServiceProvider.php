@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace IoDigital\TruncateTable;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use IoDigital\TruncateTable\Commands\TruncateTableCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class TruncateTableServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,6 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->name('truncate-tables');
     }
 }

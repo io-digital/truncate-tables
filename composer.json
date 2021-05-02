@@ -1,24 +1,26 @@
 {
-    "name": "vendor_slug/package_slug",
-    "description": ":package_description",
+    "name": "io-digital/truncate-tables",
+    "description": "A Laravel package to easily truncate database tables when running seeder files",
     "keywords": [
-        ":vendor_name",
+        "io-digital",
         "laravel",
-        "package_slug"
+        "truncate-tables"
     ],
-    "homepage": "https://github.com/vendor_slug/package_slug",
+    "homepage": "https://github.com/io-digital/truncate-tables",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Gareth Nicholson",
+            "email": "gareth@io.co.za",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.0",
         "spatie/laravel-package-tools": "^1.4.3",
-        "illuminate/contracts": "^8.37"
+        "illuminate/contracts": "^5.0|^6.0|^7.0|^8.0",
+        "illuminate/support": "^5.0|^6.0|^7.0|^8.0",
+        "illuminate/database": "^5.0|^6.0|^7.0|^8.0"
     },
     "require-dev": {
         "brianium/paratest": "^6.2",
@@ -30,13 +32,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "IoDigital\\TruncateTable\\": "src",
+            "IoDigital\\TruncateTable\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "IoDigital\\TruncateTable\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,10 +52,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "IoDigital\\TruncateTable\\TruncateTableServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "TruncateTable": "IoDigital\\TruncateTable\\TruncateTableFacade"
             }
         }
     },
